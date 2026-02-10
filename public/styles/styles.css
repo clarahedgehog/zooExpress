@@ -1,0 +1,9 @@
+:root {
+    --primary-color-orange: #F46036; /* header, buttons, page-titles, accents */
+    --secondary-color-yellow: #FFC53A; /* Sidebar, accents, birds, hero background color */
+    --accent-color-green: #13505B; /* Used for footer, reptiles, accents */
+    --background-color: #FAF9F5; /* Main background color for the website */
+    --text-color-black: #000000; /* Primary text color for paragraphs */
+    --text-color-white: #FFFFFF; /* Text on dark backgrounds, such as headers, buttons, and hero page */
+    font-family: "helvetica-neue-lt-pro", sans-serif;  /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
+}
