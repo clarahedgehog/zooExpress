@@ -1,0 +1,15 @@
+<% if (animalsList) { %>
+  <% animalsList.forEach(animal=> { %>
+    <div>
+      <%= animal.name %>
+        <%= animal.lifespan %>
+          <%= animal.group %>
+            <%= animal.food %>
+              <%= animal.description %>
+                <%= animal.length %>
+                  <%= animal.weight %>
+                    <%= animal.found %>
+    </div>
+    <img src=/images/<%=animal.image %> alt="animal" height="200px" width="200px" />
+    <% }) %>
+      <% } %>
