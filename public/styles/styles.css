@@ -1,0 +1,31 @@
+/* STYLING */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  align-items: center;
+  background-color: #f46036;
+  font-weight: bold;
+  display: flex;
+  color: white;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  padding: 15px 40px;
+}
+
+.animal_list {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* transition: opacity 0.3s ease; */
+}
+
+.animal_list:hover {
+  text-decoration: underline;
+}
