@@ -2,7 +2,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "helvetica.neue-lt-pro", sans-serif;
+  font-family: "helveticaneue-lt-pro", sans-serif;
 }
 
 :root {
@@ -15,6 +15,7 @@
   font-family:
     "helvetica-neue-lt-pro", sans-serif; /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
 }
+
 
 /* NAVBAR */
 
@@ -50,4 +51,42 @@
 
 .animal_list:hover {
   text-decoration: underline;
+}
+
+.hero {
+    background-color: var(--secondary-color-yellow);
+}
+.hero_parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+    
+.hero_title {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.hero_subtitle {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.hero_btn {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+.hero_img {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background-color: var(--text-color-white);
+    border-radius: 100%;
 }
