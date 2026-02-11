@@ -21,6 +21,7 @@
   justify-content: center;
   padding: 16px;
   gap: 16px;
+  background-color: var(--background-color);
 }
 
 .animal_card {
@@ -42,8 +43,14 @@
   padding: 16px;
 }
 
+.animal_group_name {
+  color: var(--primary-color-orange);
+}
+
 .animal_title {}
 
-.animal_information {}
+.animal_information {
+  font-weight: lighter;
+}
 
 .animal_image {}
