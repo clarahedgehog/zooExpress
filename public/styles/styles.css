@@ -1,0 +1,47 @@
+:root {
+  --primary-color-orange: #F46036;
+  /* header, buttons, page-titles, accents */
+  --secondary-color-yellow: #FFC53A;
+  /* Sidebar, accents, birds, hero background color */
+  --accent-color-green: #13505B;
+  /* Used for footer, reptiles, accents */
+  --background-color: #FAF9F5;
+  /* Main background color for the website */
+  --text-color-black: #000000;
+  /* Primary text color for paragraphs */
+  --text-color-white: #FFFFFF;
+  /* Text on dark backgrounds, such as headers, buttons, and hero page */
+  font-family: "helvetica-neue-lt-pro", sans-serif;
+  /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
+}
+
+.animal_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.animal_card {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  align-items: center;
+  background-color: var(--primary-color-orange);
+  border-radius: 20px;
+  color: var(--text-color-white);
+}
+
+.animal_text {
+  flex-direction: row;
+  width: 40%;
+}
+
+.animal_box {}
+
+.animal_title {}
+
+.animal_information {}
+
+.animal_image {}
