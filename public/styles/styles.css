@@ -51,3 +51,33 @@
 .animal_list:hover {
   text-decoration: underline;
 }
+
+.footer {
+  background-color: var(--accent-color-green);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--text-color-white)
+}
+
+.footer_copyright {
+  font-size: 24px;
+  padding-top: 10px;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: end;
+}
+
+.footer img {
+  height: 48px;
+  display: flex;
+  margin-right: auto;
+}
+
