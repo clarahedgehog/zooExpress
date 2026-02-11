@@ -2,16 +2,26 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary-color-orange: #f46036; /* header, buttons, page-titles, accents */
+  --secondary-color-yellow: #ffc53a; /* Sidebar, accents, birds, hero background color */
+  --accent-color-green: #13505b; /* Used for footer, reptiles, accents */
+  --background-color: #faf9f5; /* Main background color for the website */
+  --text-color-black: #000000; /* Primary text color for paragraphs */
+  --text-color-white: #ffffff; /* Text on dark backgrounds, such as headers, buttons, and hero page */
+  font-family:
+    "helvetica-neue-lt-pro", sans-serif; /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
 }
 
 /* NAVBAR */
 .navbar {
   align-items: center;
-  background-color: #f46036;
+  background-color: var(--primary-color-orange);
   font-weight: bold;
   display: flex;
-  color: white;
+  color: var(--text-color-white);
   display: flex;
   gap: 80px;
   justify-content: center;
@@ -20,7 +30,7 @@
 
 .animal_list {
   text-decoration: none;
-  color: white;
+  color: var(--text-color-white);
   font-size: 0.9rem;
   font-weight: 500;
 }
