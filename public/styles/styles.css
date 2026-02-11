@@ -38,7 +38,9 @@
   width: 40%;
 }
 
-.animal_box {}
+.animal_box {
+  padding: 16px;
+}
 
 .animal_title {}
 
