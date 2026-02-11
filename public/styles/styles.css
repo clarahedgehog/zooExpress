@@ -2,6 +2,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "helvetica.neue-lt-pro", sans-serif;
 }
 
 :root {
@@ -16,22 +17,34 @@
 }
 
 /* NAVBAR */
+
+.header {
+  background-color: var(--primary-color-orange);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  height: 48px;
+  display: flex;
+  margin-right: auto;
+}
+
 .navbar {
   align-items: center;
-  background-color: var(--primary-color-orange);
-  font-weight: bold;
+  font-size: 2rem;
   display: flex;
   color: var(--text-color-white);
-  display: flex;
-  gap: 80px;
+  gap: 40px;
   justify-content: center;
-  padding: 15px 40px;
+  padding: 25px;
 }
 
 .animal_list {
   text-decoration: none;
   color: var(--text-color-white);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
