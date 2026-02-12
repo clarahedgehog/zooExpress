@@ -1,10 +1,13 @@
 <%- include("../partials/head.ejs")%>
 <%- include("../partials/menu.ejs")%>
 <body>
+  <div class="container">
+  <%- include("../partials/sidebar.ejs") %>
   <% if (locals.animalsList) { %>
     <% if (pageType==="animals" ) { %>
       <%- include('../partials/animals') %>
         <% }} %>
+        </div>
         <%- include('../partials/footer')  %>
 </body>
 
