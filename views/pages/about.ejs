@@ -1,0 +1,21 @@
+<%- include("../partials/head")  %>
+<body>
+  <%- include("../partials/menu")  %>
+  <main class="main_about">
+    <h1 class="about_header">Meet our team!</h1>
+    <div class="team">
+      <% if(aboutUs) { %>
+        <% aboutUs.forEach(member => { %>
+          <div class="team_card">
+            <div class="member_info">
+              <h3 class="team_member_name"><%= member.name %></h3>
+              <p class="team_member_role"><%= member.role %></p>
+              <p class="team_member_bio"><%= member.bio %></p>
+              </div>
+            </div>
+            <% }) %>
+      <% } %>
+    </div>
+  </main>
+    <%- include("../partials/footer")  %>
+</body>

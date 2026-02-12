@@ -4,6 +4,7 @@ import * as path from "path"
 import mammalsRouter from "./routes/mammals-route.js"
 import birdsRouter from "./routes/birds-route.js"
 import { mammals, reptiles, birds } from "./data/data.js"
+import aboutRouter from "./routes/about-route.js"
 
 const app = express()
 const port = 3003
@@ -31,5 +32,6 @@ app.get("/", (req, res) => {
 app.use("/reptiles", reptilesRouter)
 app.use("/mammals", mammalsRouter)
 app.use("/birds", birdsRouter)
+app.use("/about", aboutRouter)
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
