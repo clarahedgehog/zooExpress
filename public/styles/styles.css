@@ -204,3 +204,90 @@
     background-color: var(--text-color-white);
     border-radius: 100%;
 }
+
+.mammal {
+    color: var(--primary-color-orange);
+}
+.reptile {
+    color: var(--accent-color-green);
+}
+.bird {
+    color: var(--secondary-color-yellow);
+}
+
+.animal_name {
+    color: var(--text-color-black);
+    cursor: default;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 7px 0 4px 0;
+}
+.infocard {
+    width: 235px;
+}
+.infocard img {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    height: 235px;
+    object-fit: cover;
+}
+
+.infocard img:hover {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+
+}
+
+.group_tag {
+    border-radius: 3px;
+    border: solid 1px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300px;
+    letter-spacing: 0.5px;
+    padding: 3px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.group_tag:hover {
+    color: var(--text-color-white);
+    transition: background-color 0.3s ease;
+}
+.group_tag.mammal:hover {
+    background-color: var(--primary-color-orange);
+}
+
+.group_tag.reptile:hover {
+    background-color: var(--accent-color-green);
+}
+.group_tag.bird:hover {
+    background-color: var(--secondary-color-yellow);
+}
+
+.home_animals {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 69px 0;
+}
+
+.home_animals-title {
+    color: var(--primary-color-orange);
+    cursor: default;
+    text-align: center;
+    font-size: 99px;
+    font-weight: 700;
+    margin-bottom: 69px;
+    text-transform: capitalize;
+}
+
+.home_animals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 55px;
+    column-gap: 32px;
+    max-width: 1087px;
+}

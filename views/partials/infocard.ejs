@@ -1,0 +1,9 @@
+<% animalsInfo.forEach(animal => { %>
+    <div class="infocard <%= animal.group %>">
+        <a href="/<%= animal.group %>s">
+            <img src="/images/<%= animal.image %>" alt="<%= animal.name %>">
+        </a>
+        <h2 class="animal_name"><%= animal.name %></h2>
+        <a href="/<%= animal.group %>s" class="group_tag <%= animal.group %>"><%= animal.group %></a>
+    </div>
+<% }) %>
