@@ -52,27 +52,47 @@
   text-decoration: underline;
 }
 
-.footer {
-  background-color: var(--accent-color-green);
-  width: 100%;
+.container {
   display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: var(--text-color-white)
+  background-color: var(--secondary-color-yellow);
+  padding-top: 20px;
 }
 
-.footer_copyright {
-  font-size: 24px;
-  padding-top: 10px;
+.sidebar-animals {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
 }
 
-.footer_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: end;
+.sidebar-animals li {
+  list-style: none;
+}
+
+.sidebar-animals-button {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: var(--secondary-color-yellow);
+  color: var(--text-color-white);
+  font-size: 1.4rem;
+  border-radius: 24px;
+  cursor: pointer;
+  margin: 16px;
+  text-decoration: none;
+}
+
+.sidebar-animals-button:hover {
+  transform: scale(1.07);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .footer {
@@ -100,6 +120,7 @@
 
 .animal_container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding: 16px;
@@ -110,11 +131,17 @@
 .animal_card {
   display: flex;
   flex-direction: column;
-  width: min-content;
   align-items: center;
   background-color: var(--primary-color-orange);
   border-radius: 20px;
   color: var(--text-color-white);
+}
+
+.animal-item {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
 }
 
 .animal_text {
