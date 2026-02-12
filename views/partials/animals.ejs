@@ -1,15 +1,42 @@
+<link rel="stylesheet" href="/styles/styles.css">
+
 <% if (animalsList) { %>
+    <div class="animal_container">
   <% animalsList.forEach(animal=> { %>
-    <div>
-      <%= animal.name %>
-        <%= animal.lifespan %>
+    <div class="animal-item">
+      <div class="animal_card">
+        <img class="animal_image" src=/images/<%=animal.image %> alt="animal" height="200px" width="200px" />
+        <div class="animal_box">
+          <p class="animal_information">
+            Lifespan: <%= animal.lifespan %>
+          </p>
+          <p class="animal_information">
+            Lenght: <%= animal.length %>
+          </p>
+          <p class="animal_information">
+            Weight: <%= animal.weight %>
+          </p>
+          <p class="animal_information">
+            Food: <%= animal.food %>
+          </p>
+          <p class="animal_information">
+            Found: <%= animal.found %>
+          </p>
+        </div>
+      </div>
+
+      <div class="animal_text">
+        <h2 class="animal_title">
+          <%= animal.name %>
+        </h2>
+        <p class="animal_group_name">
           <%= animal.group %>
-            <%= animal.food %>
-              <%= animal.description %>
-                <%= animal.length %>
-                  <%= animal.weight %>
-                    <%= animal.found %>
-    </div>
-    <img src=/images/<%=animal.image %> alt="animal" height="200px" width="200px" />
+        </p>
+        <p class="animal_information">
+          <%= animal.description %>
+        </p>
+      </div>
+      </div>
     <% }) %>
+        </div>
       <% } %>

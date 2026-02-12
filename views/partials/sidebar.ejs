@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <ul class="sidebar-animals">
+    <% if(animalsList) { %>
+      <% animalsList.forEach(animal => { %>
+        <li>
+          <a href="#"ç class="sidebar-animals-button">
+            <%= animal.name %>
+          </a>
+        </li>
+     <% }); %>
+     <% } %>
+  </ul>
+</div>
