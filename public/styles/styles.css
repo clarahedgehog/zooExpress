@@ -16,6 +16,11 @@
     "helvetica-neue-lt-pro", sans-serif; /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 /* NAVBAR */
 
@@ -168,126 +173,175 @@
 }
 
 .hero {
-    background-color: var(--secondary-color-yellow);
+  background-color: var(--secondary-color-yellow);
 }
 .hero_parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
 }
 
-    
 .hero_title {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
 }
 
 .hero_subtitle {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 3;
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 3;
 }
 
 .hero_btn {
-    grid-column: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 5;
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 5;
 }
 
 .hero_img {
-    grid-column: span 2 / span 2;
-    grid-row: span 5 / span 5;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    background-color: var(--text-color-white);
-    border-radius: 100%;
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  background-color: var(--text-color-white);
+  border-radius: 100%;
 }
 
 .mammal {
-    color: var(--primary-color-orange);
+  color: var(--primary-color-orange);
 }
 .reptile {
-    color: var(--accent-color-green);
+  color: var(--accent-color-green);
 }
 .bird {
-    color: var(--secondary-color-yellow);
+  color: var(--secondary-color-yellow);
 }
 
 .animal_name {
-    color: var(--text-color-black);
-    cursor: default;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    margin: 7px 0 4px 0;
+  color: var(--text-color-black);
+  cursor: default;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 7px 0 4px 0;
 }
 .infocard {
-    width: 235px;
+  width: 235px;
 }
 .infocard img {
-    background-color: var(--background-color);
-    border-radius: 10px;
-    height: 235px;
-    object-fit: cover;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  height: 235px;
+  object-fit: cover;
 }
 
 .infocard img:hover {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
-
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 .group_tag {
-    border-radius: 3px;
-    border: solid 1px;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300px;
-    letter-spacing: 0.5px;
-    padding: 3px 6px;
-    text-decoration: none;
-    text-transform: uppercase;
+  border-radius: 3px;
+  border: solid 1px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300px;
+  letter-spacing: 0.5px;
+  padding: 3px 6px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .group_tag:hover {
-    color: var(--text-color-white);
-    transition: background-color 0.3s ease;
+  color: var(--text-color-white);
+  transition: background-color 0.3s ease;
 }
 .group_tag.mammal:hover {
-    background-color: var(--primary-color-orange);
+  background-color: var(--primary-color-orange);
 }
 
 .group_tag.reptile:hover {
-    background-color: var(--accent-color-green);
+  background-color: var(--accent-color-green);
 }
 .group_tag.bird:hover {
-    background-color: var(--secondary-color-yellow);
+  background-color: var(--secondary-color-yellow);
 }
 
 .home_animals {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 16px 0 69px 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0 69px 0;
 }
 
 .home_animals-title {
-    color: var(--primary-color-orange);
-    cursor: default;
-    text-align: center;
-    font-size: 99px;
-    font-weight: 700;
-    margin-bottom: 69px;
-    text-transform: capitalize;
+  color: var(--primary-color-orange);
+  cursor: default;
+  text-align: center;
+  font-size: 99px;
+  font-weight: 700;
+  margin-bottom: 69px;
+  text-transform: capitalize;
 }
 
 .home_animals-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 55px;
-    column-gap: 32px;
-    max-width: 1087px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 55px;
+  column-gap: 32px;
+  max-width: 1087px;
+}
+
+.main_about {
+  padding: 40px;
+  background-color: var(--background-color);
+  flex: 1;
+}
+
+.about_header {
+  color: var(--primary-color-orange);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.team_card {
+  background-color: white;
+  border-radius: 24px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member_info {
+  text-align: center;
+}
+
+.team_member_name {
+  color: var(--primary-color-orange);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.team_member_role {
+  color: var(--accent-color-green);
+  font-weight: bolder;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.team_member_bio {
+  color: var(--text-color-black);
+  font-size: 1rem;
 }
