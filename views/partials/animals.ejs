@@ -1,42 +1,31 @@
-<link rel="stylesheet" href="/styles/styles.css">
-
 <% if (animalsList) { %>
-    <div class="animal_container">
-  <% animalsList.forEach(animal=> { %>
-    <div class="animal-item">
-      <div class="animal_card">
-        <img class="animal_image" src=/images/<%=animal.image %> alt="animal" height="200px" width="200px" />
-        <div class="animal_box">
+  <div class="animal_container">
+    <% animalsList.forEach(animal=> { %>
+      <div class="animal-item">
+        <div class="animal_card <%= animal.group %>">
+          <a href="/<%= animal.group %>s?name=<%= animal.name %>" class="image_wrapper">
+            <img class="animal_image" src=/images/<%=animal.image %> alt="<%= animal.name %>"/>
+          </a>
+          <div class="animal_box">
+            <%- include('./animal-box', {animal: animal}) %>
+          </div>
+        </div>
+        <div class="animal_text">
+          <a href="/<%= animal.group %>s?name=<%= animal.name %>">
+            <h2 class="animal_title">
+              <%= animal.name %>
+            </h2>
+          </a>
+          <a href="/<%= animal.group %>s" class="animal_group_name">
+            <p class="group_tag <%= animal.group %>">
+              <%= animal.group %>
+            </p>
+          </a>
           <p class="animal_information">
-            Lifespan: <%= animal.lifespan %>
-          </p>
-          <p class="animal_information">
-            Lenght: <%= animal.length %>
-          </p>
-          <p class="animal_information">
-            Weight: <%= animal.weight %>
-          </p>
-          <p class="animal_information">
-            Food: <%= animal.food %>
-          </p>
-          <p class="animal_information">
-            Found: <%= animal.found %>
+            <%= animal.description %>
           </p>
         </div>
-      </div>
-
-      <div class="animal_text">
-        <h2 class="animal_title">
-          <%= animal.name %>
-        </h2>
-        <p class="animal_group_name">
-          <%= animal.group %>
-        </p>
-        <p class="animal_information">
-          <%= animal.description %>
-        </p>
-      </div>
-      </div>
+      </div>     
     <% }) %>
-        </div>
-      <% } %>
+  </div>
+<% } %>
