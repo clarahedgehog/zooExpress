@@ -16,6 +16,22 @@
     "helvetica-neue-lt-pro", sans-serif; /* Global font for the website. "<link rel="stylesheet" href="https://use.typekit.net/bju8pmn.css">" <-- needs to be added to index.ejs */
 }
 
+h1 {
+    font-weight: inherit;
+}
+
+h2 {
+    font-weight: inherit;
+}
+
+h4 {
+    font-weight: inherit;
+}
+a {
+    text-decoration: none;
+    font-weight: inherit;
+    color: inherit;
+}
 
 /* NAVBAR */
 
@@ -168,10 +184,9 @@
 }
 
 .hero {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 10vh);
+    min-height: max-content;
     display: flex;
-    padding: 5vh 0 0 0;
-    justify-content: space-between;  
     flex-direction: column;  
     background-color: var(--secondary-color-yellow);
 }
@@ -180,36 +195,68 @@
     align-self: center;
     align-items: center;
     flex-direction: row;
+    margin: 0 10vw;
     max-width: 1087px;
+    height: 80%;
+    min-height: max-content;
+    gap: 34px;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
 }
 
     
 .hero_title {
     color: var(--text-color-white);
-    font-size: 120px;
+    font-weight: bold;
+    font-size: 3.5em;
 }
 
 .hero_subtitle {
+    font-weight: 200;
+    font-size: 1.2em;
+    letter-spacing: 1.03px;
+    width: 80%;
 }
 
 .hero_btn {
+    background-color: var(--primary-color-orange);
+    color: var(--text-color-white);
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    padding: 13px 27px;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+}
+
+.hero_btn:hover {
+    background-color: rgba(244, 95, 54, 0.629);
+    transition: background-color 0.3s ease;
 }
 
 .hero_img {
     width: 100%;
-    height: 499px;
+    height: 349px;
     background-image: url('../images/hero-image.png');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero_border {
     background-image: url('../images/hero-border.png');
     width: 100%;
     height: 150px;
-    background-size:auto;
+    margin-top: auto;
+    align-self: flex-end;
+    background-size: auto;
     background-repeat: repeat-x;
-    background-position: end;
 }
 
 .mammal {
@@ -297,4 +344,47 @@
     row-gap: 55px;
     column-gap: 32px;
     max-width: 1087px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        height: 85vh;
+    }
+
+    .hero_parent {
+        flex-direction: column-reverse;
+        align-self: center;
+        align-items: center;
+        margin: 0 10vw;
+        max-width: 1087px;
+        height: 80%;
+        min-height: max-content;
+        gap: 34px;
+    }
+
+    .hero_img {
+        width: 100%;
+        height: 200px;
+    }
+    .hero_title {
+        font-size: 2em;
+        text-align: center;
+    }
+    .child {
+        align-items: center;
+    }
+
+    .hero_subtitle {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero_border {
+        height: 80px;
+        background-size: contain;
+        background-position: bottom;
+        margin-bottom: -3px;
+    }
 }
