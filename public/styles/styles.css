@@ -21,6 +21,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+h1 {
+    font-weight: inherit;
+}
+
+h2 {
+    font-weight: inherit;
+}
+
+h4 {
+    font-weight: inherit;
+}
+a {
+    text-decoration: none;
+    font-weight: inherit;
+    color: inherit;
+}
 
 /* NAVBAR */
 
@@ -173,40 +189,78 @@ body {
 }
 
 .hero {
-  background-color: var(--secondary-color-yellow);
+    height: calc(100vh - 10vh);
+    min-height: max-content;
+    display: flex;
+    flex-direction: column;  
+    background-color: var(--secondary-color-yellow);
 }
 .hero_parent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 8px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 10vw;
+    max-width: 1087px;
+    height: 80%;
+    min-height: max-content;
+    gap: 34px;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
 }
 
 .hero_title {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
+    color: var(--text-color-white);
+    font-weight: bold;
+    font-size: 3.5em;
 }
 
 .hero_subtitle {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-  grid-column-start: 1;
-  grid-row-start: 3;
+    font-weight: 200;
+    font-size: 1.2em;
+    letter-spacing: 1.03px;
+    width: 80%;
 }
 
 .hero_btn {
-  grid-column: span 2 / span 2;
-  grid-column-start: 1;
-  grid-row-start: 5;
+    background-color: var(--primary-color-orange);
+    color: var(--text-color-white);
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    padding: 13px 27px;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+}
+
+.hero_btn:hover {
+    background-color: rgba(244, 95, 54, 0.629);
+    transition: background-color 0.3s ease;
 }
 
 .hero_img {
-  grid-column: span 2 / span 2;
-  grid-row: span 5 / span 5;
-  grid-column-start: 3;
-  grid-row-start: 1;
-  background-color: var(--text-color-white);
-  border-radius: 100%;
+    width: 100%;
+    height: 349px;
+    background-image: url('../images/hero-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero_border {
+    background-image: url('../images/hero-border.png');
+    width: 100%;
+    height: 150px;
+    margin-top: auto;
+    align-self: flex-end;
+    background-size: auto;
+    background-repeat: repeat-x;
 }
 
 .mammal {
@@ -344,4 +398,47 @@ body {
 .team_member_bio {
   color: var(--text-color-black);
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        height: 85vh;
+    }
+
+    .hero_parent {
+        flex-direction: column-reverse;
+        align-self: center;
+        align-items: center;
+        margin: 0 10vw;
+        max-width: 1087px;
+        height: 80%;
+        min-height: max-content;
+        gap: 34px;
+    }
+
+    .hero_img {
+        width: 100%;
+        height: 200px;
+    }
+    .hero_title {
+        font-size: 2em;
+        text-align: center;
+    }
+    .child {
+        align-items: center;
+    }
+
+    .hero_subtitle {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero_border {
+        height: 80px;
+        background-size: contain;
+        background-position: bottom;
+        margin-bottom: -3px;
+    }
 }
