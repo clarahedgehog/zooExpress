@@ -160,9 +160,18 @@ a {
   flex-direction: column;
   width: min-content;
   align-items: center;
-  background-color: var(--primary-color-orange);
   border-radius: 20px;
   color: var(--text-color-white);
+}
+
+.animal_card.mammal {
+  background-color: var(--primary-color-orange);
+}
+.animal_card.reptile {
+  background-color: var(--accent-color-green);
+}
+.animal_card.bird {
+  background-color: var(--secondary-color-yellow);
 }
 
 .animal_text {
@@ -171,11 +180,60 @@ a {
 }
 
 .animal_box {
-  padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 21px 12px;
+    width: 100%;
+  color: var(--text-color-white);
 }
 
+.div2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.div3 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.div4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.div5 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.div6 {
+    grid-row-start: 2;
+}
+
+.div7 {
+    grid-row-start: 3;
+}
+
+.div8 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 4;
+}
+
+.div9 {
+    grid-row-start: 5;
+    margin: 12px 0 0 0;
+}
+
+.div10 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 6;
+}
+        
+
 .animal_group_name {
-  color: var(--primary-color-orange);
+    margin: 6px 0 18px 0;
 }
 
 .animal_title {
@@ -185,7 +243,53 @@ a {
   font-weight: lighter;
 }
 
+.info_small {
+  height: min-content;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.info_big {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.info_normal {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.animal_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.space {
+  margin: 32px 0 0 0;
+}
+.image_wrapper {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;          
+    border-radius: 10px 10px 0 0;
+}
+
 .animal_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+} 
+
+.image_wrapper:hover .animal_image {
+    transform: scale(1.2);
 }
 
 .hero {
@@ -301,6 +405,8 @@ a {
 .group_tag {
   border-radius: 3px;
   border: solid 1px;
+  margin: inherit;
+  cursor: pointer;
   font-size: 12px;
   font-style: normal;
   font-weight: 300px;
@@ -308,7 +414,9 @@ a {
   padding: 3px 6px;
   text-decoration: none;
   text-transform: uppercase;
+  width: max-content;
 }
+
 .group_tag:hover {
   color: var(--text-color-white);
   transition: background-color 0.3s ease;
@@ -488,5 +596,19 @@ a {
     .home_animals-container {
         row-gap: 32px;
         column-gap: 12px;
+    }
+    .animal-item {
+        flex-direction: column;
+    }
+
+    .animal_image {
+        width: 90wv;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }   
+
+    .animal_text {
+        width: 100%;
     }
 }
