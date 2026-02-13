@@ -259,7 +259,8 @@ a {
     height: 150px;
     margin-top: auto;
     align-self: flex-end;
-    background-size: auto;
+    background-size: contain;
+    background-position: bottom;
     background-repeat: repeat-x;
 }
 
@@ -457,5 +458,35 @@ a {
         background-size: contain;
         background-position: bottom;
         margin-bottom: -3px;
+    }
+
+    .animal_name {
+        font-size: 18px;
+    }
+
+    .infocard {
+        width: 170px;
+    }
+    
+    .infocard img {
+        height: 170px;
+    }
+    
+    .group_tag {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .home_animals {
+        padding: 69px 12px;
+    }
+
+    .home_animals-title {
+        font-size: 50px;
+    }
+    
+    .home_animals-container {
+        row-gap: 32px;
+        column-gap: 12px;
     }
 }
