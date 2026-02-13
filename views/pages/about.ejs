@@ -1,7 +1,13 @@
 <%- include("../partials/head")  %>
 <body>
   <%- include("../partials/menu")  %>
-  <main class="main_about">
+    <main class="main_about">
+  <% if (mission) { %>
+    <div class="mission-section">
+      <h2 class="mission-header">Our mission</h2>
+      <p class="mission-text"><%= mission %></p>
+    </div>
+    <% } %>
     <h1 class="about_header">Meet our team!</h1>
     <div class="team">
       <% if(aboutUs) { %>
